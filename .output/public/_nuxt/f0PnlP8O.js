@@ -1,0 +1,1 @@
+import{W as i,I as t,X as r,V as n}from"./PHvyKdGZ.js";import{u}from"./CjCrxRSw.js";import"./BJ2ClxiI.js";const g=i(async()=>{const s=t(),e=r();if(!s.value){const o=u(e.public.cookieLoggedInName);if(o.value){o.value=null;const a=u(e.public.cookieName);return a.value=null,n({name:"login",query:{reason:"account-removed"}})}return n({name:"login"})}});export{g as default};

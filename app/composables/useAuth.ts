@@ -23,6 +23,21 @@ export const useAuth = () => {
     return authUser;
   };
 
+  const signup = async (email: string, password: string, confirmPassword: string) => {
+    const data = await $fetch("/auth/signup", {
+      method: "POST",
+      body: {
+        email,
+        password,
+        confirmPassword,
+      },
+    });
+
+    setUser(data.user);
+
+    return authUser;
+  };
+
   const logout = async () => {
     const data = await $fetch("/auth/logout", {
       method: "POST",
@@ -49,6 +64,7 @@ export const useAuth = () => {
 
   return {
     login,
+    signup,
     logout,
     me,
   };

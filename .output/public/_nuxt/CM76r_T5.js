@@ -1,0 +1,1 @@
+import{_ as s,c as o,o as n,a as t}from"./PHvyKdGZ.js";const a={},c={class:"bg-slate-900"};function _(r,e){return n(),o("footer",c,[...e[0]||(e[0]=[t("div",{class:"p-3 flex justify-center text-xs"},[t("p",null,"Simple authentification with Nuxt3")],-1)])])}const l=Object.assign(s(a,[["render",_]]),{__name:"BaseFooter"});export{l as _};

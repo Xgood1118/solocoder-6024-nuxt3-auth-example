@@ -1,0 +1,1 @@
+import{b as _,_ as c,a}from"./CBAVbFYG.js";import{G as r,I as u,c as p,b as e,B as m,o as i}from"./PHvyKdGZ.js";const b=r({__name:"guest",setup(l){const t=u();return(g,d)=>{const n=c,o=a,s=_;return i(),p("div",null,[e(n,{title:"Guest page"}),e(o,{description:"This page should only be accessible to guests."}),e(s,{user:m(t)},null,8,["user"])])}}});export{b as default};

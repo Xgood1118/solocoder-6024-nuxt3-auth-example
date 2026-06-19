@@ -1,0 +1,1 @@
+import{b as c,_,a}from"./CBAVbFYG.js";import{G as r,I as u,c as p,b as e,B as i,o as m}from"./PHvyKdGZ.js";const b=r({__name:"account",setup(l){const n=u();return(d,f)=>{const o=_,t=a,s=c;return m(),p("div",null,[e(o,{title:"Account page"}),e(t,{description:"This page should only be visible if user is connected"}),e(s,{user:i(n)},null,8,["user"])])}}});export{b as default};

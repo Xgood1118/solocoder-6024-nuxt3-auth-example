@@ -27,10 +27,13 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxt/eslint", "@unocss/nuxt"],
   runtimeConfig: {
-    cookieName: "__session",
     cookieSecret: "secret",
     cookieExpires: ONE_DAY.toString(),
     cookieRememberMeExpires: ONE_WEEK.toString(),
+    public: {
+      cookieName: "__session",
+      cookieLoggedInName: "__session_logged_in",
+    },
   },
   unocss: {
     safelist: ["bg-slate-950", "antialiased", "text-white"],
