@@ -6,11 +6,19 @@ import { randomUUID } from "node:crypto";
 export default defineEventHandler(async (event) => {
   const body = await readBody<{ email: string; password: string; confirmPassword: string }>(event);
 
-  const { email, password, confirmPassword } = body;
+  const { email: rawEmail, password, confirmPassword } = body;
+  const email = typeof rawEmail === "string" ? rawEmail.trim() : "";
   if (!email || !password || !confirmPassword) {
     throw createError({
       statusCode: 400,
       message: "Email address, password, and confirm password are required",
+    });
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    throw createError({
+      statusCode: 400,
+      message: "Invalid email address format",
     });
   }
 

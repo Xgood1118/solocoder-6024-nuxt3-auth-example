@@ -6,7 +6,8 @@ import { randomUUID } from "node:crypto";
 export default defineEventHandler(async (event) => {
   const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
 
-  const { email, password, rememberMe } = body;
+  const { email: rawEmail, password, rememberMe } = body;
+  const email = typeof rawEmail === "string" ? rawEmail.trim() : "";
   if (!email || !password) {
     throw createError({
       statusCode: 400,
